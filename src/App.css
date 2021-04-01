@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+  background-color: rgb(17, 17, 17);
+  width: 100vw;
+  height: 100vh;
+}
+
+.bigdiv {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.titletext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 90px;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  animation: glitch 1s infinite;
+}
+
+.particles {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.titletext span {
+  position: absolute;
+  width: 100vw;
+}
+
+.padding {
+  padding: 10px;
+}
+
+.h3 {
+  padding-top: 50px;
+  padding-bottom: 15px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 255, 0.75),
+    -0.025em -0.05em 0 rgba(255, 255, 0, 0.75),
+    0.05em 0.025em 0 rgba(0, 255, 255, 0.75);
+}
+
+.paddingtop {
+  padding-top: 60px;
+}
+
+h2 {
+  text-align: left;
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 255, 0.75),
+    -0.025em -0.05em 0 rgba(255, 255, 0, 0.75),
+    0.05em 0.025em 0 rgba(0, 255, 255, 0.75);
+}
+
+.titletext span:first-child {
+  animation: glitch 650ms infinite;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+  transform: translate(-0.025em, -0.0125em);
+}
+
+.titletext span:last-child {
+  animation: glitch 350ms infinite;
+  z-index: 1;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  transform: translate(0.025em, 0.0125em);
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.05em 0.025em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.05em 0.025em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em 0 0 rgba(255, 0, 0, 0.75),
+      0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.05em -0.025em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em 0 0 rgba(255, 0, 0, 0.75),
+      0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.05em -0.025em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      -0.05em 0.025em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      -0.05em 0.025em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em 0.025em 0 rgba(0, 0, 255, 0.75);
+  }
+}
