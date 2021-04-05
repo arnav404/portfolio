@@ -26,12 +26,15 @@
     rgb(0, 0, 255)
   );
   border-image-slice: 1;
+  width: 300px;
+  height: 410px;
 }
 
 .row {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 20%;
 }
 
 .card:hover {
@@ -42,18 +45,22 @@
 @keyframes contract {
   from {
     width: 350px;
+    height: 501px;
   }
   to {
     width: 300px;
+    height: 410px;
   }
 }
 
 @keyframes expand {
   from {
     width: 300px;
+    height: 410px;
   }
   to {
     width: 350px;
+    height: 501px;
   }
 }
 
@@ -98,11 +105,13 @@
   background-color: rgb(87, 69, 107);
 }
 
-.image {
+.imgg {
   border-width: 3px;
   border-color: white;
   border-radius: 10px;
   border: solid;
+  width: 97.5%;
+  height: 58.139534883%;
 }
 
 .joystick {

@@ -22,19 +22,19 @@ const Project = (props) => {
             <Card onClick={() => setShown(true)} className="card" style={{ backgroundColor: '#222121', width: '18rem' }}>
             <Card.Body>
                 <Card.Title className="blurrytext title">{props.title}</Card.Title>
-                <Card.Img className="image" src={props.image} />
+                <Card.Img className="imgg" src={props.image} />
                 <Card.Text className="description">{props.text}
                 </Card.Text>
                 <div className="row">
                     <div className="row-1 padding">
-                        <a target="_blank" href="https://rnv.itch.io/ninth-circle" className="live">
+                        <a target="_blank" href={props.live} className="live">
                             <b className="buttontext">Live</b>
                         </a>
                     </div>
                     <div className="row-1 padding">
-                        <button className="code">
+                        <a target="_blank" href={props.code} className="code">
                             <b className="buttontext">Code</b>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 

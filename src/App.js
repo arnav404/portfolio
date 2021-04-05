@@ -24,9 +24,9 @@ function App() {
             />
       <div className="container bigdiv">
         <div className="column">
-          <p className="titletext fade-in row-xl"><span>I'M ARNAV
-            </span><span>I'M ARNAV</span><span>I'M ARNAV</span></p>
-          <h3 className="fade-in h3 row-xl">and I'm a moron. Bio goes here.</h3>
+          <p className="titletext fade-in row-xl"><span>Hey, I'm Arnav
+            </span><span>Hey, I'm Arnav</span><span>Hey, I'm Arnav</span></p>
+          <h3 className="fade-in h3 row-xl">I'm a first year math major from Austin, going to school in Santa Barbara.</h3>
           <div className="padding"></div>
           <div className="row">
             <div className ="row-1 padding">
