@@ -6,13 +6,28 @@ import {Link} from 'react-router-dom';
 
 const Homebutton = (props) => {
 
+    if(props.type === "blue") {
+
+        return (
+            <Link to={props.path+""}>
+                <button className="bluebux fade-in big">
+                    <h3 className="pinktext word row-sm">{props.name}</h3>
+                </button>
+            </Link>
+        )
+
+    } else {
+
+
     return (
         <Link to={props.path+""}>
-            <button className="bigbux fade-in big">
-                <h3 className="h3 word row-sm">{props.name}</h3>
+            <button className="whitebux fade-in big">
+                <h3 className="pinktext word row-sm">{props.name}</h3>
             </button>
         </Link>
     )
+
+    }
     
 }
 

@@ -24,22 +24,21 @@ function App() {
             />
       <div className="container bigdiv">
         <div className="column">
-          <p className="titletext fade-in row-xl"><span>Hey, I'm Arnav
-            </span><span>Hey, I'm Arnav</span><span>Hey, I'm Arnav</span></p>
-          <h3 className="fade-in h3 row-xl">I'm a first year math major from Austin, going to school in Santa Barbara.</h3>
+          <h1 className="row-xl whitetext">Hey, I'm Arnav</h1>
+          <h3 className="fade-in whitedesc row-xl">I'm a student and software developer from Austin, TX.</h3>
           <div className="padding"></div>
           <div className="row">
             <div className ="row-1 padding">
-              <Homebutton path="/contact/" name="CONTACT"/>
+              <Homebutton type="blue" path="/contact/" name="contact"/>
             </div>
             <div className ="row-1 padding">
-              <Homebutton path="/resume/" name="RESUME"/>
+              <Homebutton type="blue" path="/resume/" name="resume"/>
             </div>
             <div className ="row-1 padding">
-              <Homebutton path="/projects/" name="PROJECTS"/>
+              <Homebutton type="blue" path="/projects/" name="projects"/>
             </div>
             <div className ="row-1 padding">
-              <Homebutton path="/blog/" name="BLOG"/>
+              <Homebutton type="blue" path="/blog/" name="blog"/>
             </div>
           </div>
         </div>

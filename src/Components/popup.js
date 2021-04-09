@@ -14,12 +14,12 @@ const Popup = (props) => {
                         <h3 className="desc row-1">{props.description}</h3>
                         <div className="row row-1">
                             <div className="row-1 padding">
-                                <a target="_blank" href="https://rnv.itch.io/ninth-circle" className="live">
+                                <a target="_blank" href="https://rnv.itch.io/ninth-circle" className="big">
                                     <b className="buttontext">Live</b>
                                 </a>
                             </div>
                             <div className="row-1 padding">
-                                <button className="code">
+                                <button className="codebig">
                                     <b className="buttontext">Code</b>
                                 </button>
                             </div>

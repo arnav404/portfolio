@@ -30,6 +30,59 @@
   padding-top: 20px;
 }
 
+.whitebux {
+  background-color: #fc575e;
+  border: solid;
+  border-width: 2px;
+  border-color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  animation-fill-mode: forwards;
+  width: 120px;
+  height: 60px;
+  border-image-slice: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounce 1s infinite, down 1s;
+}
+
+.pinktext {
+  color: white;
+  padding-bottom: 10px;
+}
+
+.whitebux:hover {
+  background-color: rgb(0, 0, 0);
+  animation: up 1s;
+  animation-fill-mode: forwards;
+}
+
+.bluebux {
+  background-color: #009ffd;
+  border: solid;
+  border-color: rgb(255, 255, 255);
+  text-align: center;
+  border-width: 2px;
+  text-decoration: none;
+  position: relative;
+  animation-fill-mode: forwards;
+  width: 120px;
+  height: 60px;
+  border-image-slice: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounce 1s infinite, down 1s;
+}
+
+.bluebux:hover {
+  background-color: rgb(0, 0, 0);
+  animation: up 1s;
+  animation-fill-mode: forwards;
+}
+
 .bigbux {
   background-color: #212121;
   border: solid;
@@ -83,15 +136,15 @@
   from {
   }
   to {
-    width: 160px;
-    height: 80px;
+    width: 140px;
+    height: 60px;
   }
 }
 
 @keyframes down {
   from {
-    width: 160px;
-    height: 80px;
+    width: 140px;
+    height: 60px;
   }
   to {
   }

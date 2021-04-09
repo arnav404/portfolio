@@ -19,27 +19,22 @@ const Project = (props) => {
                 <Popup description={props.description} name={props.title} isShown={isShown} image={props.image}></Popup>
             </div>
             
-            <Card onClick={() => setShown(true)} className="card" style={{ backgroundColor: '#222121', width: '18rem' }}>
-            <Card.Body>
-                <Card.Title className="blurrytext title">{props.title}</Card.Title>
-                <Card.Img className="imgg" src={props.image} />
-                <Card.Text className="description">{props.text}
-                </Card.Text>
-                <div className="row">
+            <div onClick={() => setShown(true)} className="card" style={{ backgroundColor: '#222121', width: '18rem' }}>
+                <img className="imgg" src={props.image} />
+                <h1 className="blurrytext title">{props.title}</h1>
+                <div className="row buttons">
                     <div className="row-1 padding">
                         <a target="_blank" href={props.live} className="live">
-                            <b className="buttontext">Live</b>
+                            <b className="buttontext">L</b>
                         </a>
                     </div>
-                    <div className="row-1 padding">
+                    <div className="row-1 ">
                         <a target="_blank" href={props.code} className="code">
-                            <b className="buttontext">Code</b>
+                            <b className="buttontext">C</b>
                         </a>
                     </div>
                 </div>
-                
-            </Card.Body>
-            </Card>
+            </div>
         </div>
     )
 }
