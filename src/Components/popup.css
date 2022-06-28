@@ -1,6 +1,17 @@
-.img {
-  width: 430px;
-  height: 460px;
+.popupimg {
+  width: 50%;
+  border-color: white;
+  border-radius: 30px;
+}
+
+@font-face {
+  font-family: cyber;
+  src: url(font.otf);
+}
+
+@font-face {
+  font-family: cyberlight;
+  src: url(fontlight.otf);
 }
 
 .backgrounddiv {
@@ -15,30 +26,89 @@
 }
 
 .theCard {
-  position: fixed;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: black;
   border: solid;
-  width: 1000px;
+  width: 50vw;
   height: 500px;
   border-color: white;
   border-width: 2px;
   border-image-slice: 1;
+  border-radius: 40px;
   z-index: 2;
 }
 
+.liveButton {
+  border: solid;
+  border-color: white;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  z-index: 4;
+  padding: 5px;
+  border-width: 2px;
+  height: 40px;
+  border-radius: 20px;
+  font-family: inherit;
+}
+
+.liveButton:hover {
+  background-color: rgb(231, 68, 68);
+}
+
+.padding {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 .desc {
+  transform: translateY(-160px);
+  position: absolute;
   color: rgb(255, 255, 255);
   font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: cyberlight;
+  padding-right: 15px;
 }
 
 .popuptitle {
+  position: absolute;
   color: white;
+  transform: translateY(-220px);
+  font-family: cyber;
+}
+
+.buttonrow {
+  position: absolute;
+  transform: translateY(170px);
 }
 
 .popupcol {
   transform: translateY(-50%);
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+
+.builtusing {
+  color: white;
+  position: absolute;
+  transform: translateY(70px);
+  font-family: cyber;
+}
+
+.stack {
+  position: absolute;
+  transform: translateY(105px);
+}
+
+.buttontext {
+  font-family: cyberlight;
 }

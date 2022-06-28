@@ -1,7 +1,12 @@
+@font-face {
+  font-family: cyber;
+  src: url(Components/font.otf);
+}
+
 .App {
   text-align: center;
   background-color: #2a2a72;
-  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  background-image: linear-gradient(315deg, #000000 0%, #23252b 74%);
   width: 100vw;
   height: 100vh;
 }
@@ -23,7 +28,7 @@
   color: rgb(255, 255, 255);
   font-size: 90px;
   font-weight: 700;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   animation: glitch 1s infinite;
 }
 
@@ -128,6 +133,13 @@ h2 {
 
 .whitedesc {
   font-size: 40px;
-  color: rgb(207, 207, 207);
+  color: white;
   font-weight: 300;
+}
+
+.whitedesc2 {
+  font-size: 30px;
+  color: white;
+  font-weight: 300;
+  padding-bottom: 20px;
 }

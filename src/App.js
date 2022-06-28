@@ -10,7 +10,7 @@ function App() {
               params={{
             		particles: {
                   number: {
-                    value: 40
+                    value: 20
                   },
             			line_linked: {
             				shadow: {
@@ -24,21 +24,17 @@ function App() {
             />
       <div className="container bigdiv">
         <div className="column">
-          <h1 className="row-xl whitetext">Hey, I'm Arnav</h1>
-          <h3 className="fade-in whitedesc row-xl">I'm a student and software developer from Austin, TX.</h3>
+          <h1 className="fouroh row-xl whitetext">Arnav</h1>
           <div className="padding"></div>
           <div className="row">
             <div className ="row-1 padding">
-              <Homebutton type="blue" path="/contact/" name="contact"/>
+              <Homebutton type="blue" path="/resume/" name="Resume"/>
             </div>
             <div className ="row-1 padding">
-              <Homebutton type="blue" path="/resume/" name="resume"/>
+              <Homebutton type="blue" path="/projects/" name="Projects"/>
             </div>
             <div className ="row-1 padding">
-              <Homebutton type="blue" path="/projects/" name="projects"/>
-            </div>
-            <div className ="row-1 padding">
-              <Homebutton type="blue" path="/blog/" name="blog"/>
+              <Homebutton type="blue" path="/blog/" name="Blog"/>
             </div>
           </div>
         </div>

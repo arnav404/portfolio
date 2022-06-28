@@ -1,10 +1,9 @@
 .backstuff {
-  background-color: #f7b42c;
-  background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #000000 0%, #23252b 74%);
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   display: flex;
-  align-items: center;
   justify-content: center;
   z-index: 0;
 }
@@ -18,6 +17,10 @@
 .proj {
   font-size: 100px;
   color: white;
+}
+
+.paddingbig {
+  padding-top: 80px;
 }
 
 .pads {
