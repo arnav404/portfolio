@@ -1,0 +1,31 @@
+
+.cornerlogo {
+    cursor: url('/public/hand.png'), pointer;
+    position: absolute;
+    padding-top: 0px;
+    padding-left: 40px;
+  }
+
+.link {
+  cursor: url('/public/hand.png'), pointer;
+}
+
+
+.longlogo {
+  cursor: url('/public/hand.png'), pointer;
+  font-size: 30px;
+  font-family: cyberlight;
+}
+  
+  .shortlogo {
+    cursor: url('/public/hand.png'), pointer;
+    font-size: 30px;
+    font-weight: 1000;
+    font-family: cyber;
+  }
+  
+  .transparentButton {
+    cursor: url('/public/hand.png'), pointer;
+    background-color: #00000000;
+    border: none;
+  }

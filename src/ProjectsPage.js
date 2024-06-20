@@ -1,45 +1,50 @@
 import React from 'react'
 import Project from './Components/Project'
-import juliaimage from './juliaimage.png'
-import inc from './INC.png'
-import dd from './DD.png'
-import website from './website.png'
+import projects from './data/projinfo.js'
+import games from './data/gameinfo.js'
 import './ProjectsPage.css'
 import Homebutton from './Components/homebutton'
-import royale from './royale.png'
+import HomeLink  from './Components/homelink'
 
 const ProjectsPage = () => {
+
     return (
         <div>
-            <div className="backstuff">
-                <div className="column">
-                    <div className="row row-xl">
-                        <div className="pads">                           
-                                <Homebutton path="/" className="col-1 " type="white" name="home"></Homebutton>
-                        </div>
-                        <div className="pads">                           
-                                <Homebutton className="col-1 " type="white"  name="resume"></Homebutton>
-                        </div>
-                        <div className="pads">                           
-                                <Homebutton className="col-1 " type="white"  name="blog"></Homebutton>
+            <div className='backstuff'>
+            <div className="appBar">
+                    <div align="center" className="appBarRow paddingTop">
+                    <HomeLink/>
+                        <tr>
+                        <td>
+                            <Homebutton type="blue" path="/resume/" name="resume"/>
+                        </td>
+                        <td>
+                            <Homebutton type="blue" path="/blog/" name="blog"/>
+                        </td>
+                        </tr>
+                    </div>
+                    </div>
+                <div className="column container">
+                    <div className='container column center paddingbig'>
+                        <div className='ring center'>
+                            <h2 className = "whitetext">projects</h2>
                         </div>
                     </div>
-                    <h1 className = "proj fouroh center">Projects</h1>
+                    <h3 className="desc headingtext center">games, simulations, and more</h3>
                     <p/>
-                    <div className="row row-xl">
-                        <div className="padding col-xl">
-                            <Project stack={[0,2,3,5]} title="Digit Dynasty" code="https://github.com/arnav404/chess" live="" description="(In development) An online chess website similar to chess.com, where users can play against each other or against a neural network AI." image={dd}/>
-                        </div>
-                        <div className="padding col-xl">
-                            <Project stack={[1]} title="Julia Set Visualizer" live="https://rnv.itch.io/julia" description="A tool used to analyze Julia Sets, quadratic iterators, the Mandelbrot Set, and fixed point theory. Made for a mathematics class at UCSB." image={juliaimage}/>
-                        </div>
-                        <div className="padding col-xl">
-                            <Project stack={[2, 3]} title="Portfolio" live="https://arnav.pro" code="https://github.com/arnav404/portfolio" description="The website you are currently viewing." image={website}/>
-                        </div>
-                        <div className="padding col-xl">
-                            <Project stack={[1]} title="Ninth Circle" live="https://rnv.itch.io/ninth-circle" description="A puzzle game about a lost ghost trying to escape a tower. Made for a game development class at UCSB." image={inc}/>
-                        </div>
-                        </div>
+                    <div class="">
+                    <div class="row rowOfSelectable form-group">
+                        {games.map((project, index) => (
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                            <div class="card">
+                                <Project stack={project.stack} genres={project.genres} title={project.title} live={project.live} code={project.code} description={project.description} blurb={project.blurb} image={project.image} showPic={project.showPic}/>
+                            </div>
+                            </div>
+                        ))
+                        }
+                    </div>
+                    </div>
+
                 </div>
             </div>
         </div>

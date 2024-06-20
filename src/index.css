@@ -1,16 +1,7 @@
-@font-face {
-  font-family: cyber;
-  src: url(Components/font.otf);
-}
-
-@font-face {
-  font-family: cyberlight;
-  src: url(Components/fontlight.otf);
-}
-
 body {
   margin: 0;
   font-family: cyberlight;
+  background-color: #000021;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

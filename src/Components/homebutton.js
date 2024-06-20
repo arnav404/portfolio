@@ -1,10 +1,8 @@
 import React from 'react'
 import './homebutton.css'
-import Button from 'react-bootstrap/Button'
-import { useState } from 'react'
 import {Link} from 'react-router-dom';
 
-import resume from '../rresume.pdf'
+import resume from '../media/rresume.pdf'
 
 
 

@@ -2,103 +2,81 @@
   width: 20%;
 }
 
-.fade-in {
-  animation: fadeIn 2s;
-}
-
-@font-face {
-  font-family: cyber;
-  src: url(font.otf);
-}
-
-@font-face {
-  font-family: cyberlight;
-  src: url(fontlight.otf);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .icon {
   width: 100%;
 }
 
 .word {
-  font-size: 18px;
+  font-size: 20px;
   position: absolute;
   width: 100%;
-  font-family: cyberlight;
-  font-weight: 600;
+  font-family: cyber;
   padding-top: 20px;
 }
 
 .pinktext {
-  color: white;
+  color: black;
   padding-bottom: 10px;
 }
 
+.pinktext:hover {
+  color: rgb(32, 207, 149);
+}
+
 .bluebux {
-  background-color: #1e2529;
-  border: solid;
-  border-color: rgb(255, 255, 255);
-  border-radius: 60px;
-  border-width: 2px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  animation-fill-mode: forwards;
+  width: 100px;
+  height: 45px;
+  border-image-slice: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+}
+
+.helpbux {
+  display: none;
+  color:#21212100;
+  background-color: #21212100;
+  border: none;
   text-align: center;
   border-width: 2px;
   text-decoration: none;
   position: relative;
   animation-fill-mode: forwards;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 45px;
+  padding: none;
   border-image-slice: 1;
-  clip-path: circle(60px at center);
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: bounce 1s infinite, down 1s;
   font-family: inherit;
 }
 
 .bluebux:hover {
+  cursor: url('/public/hand.png'), pointer;
+  animation: up 0.25s;
   background-color: rgb(0, 0, 0);
-  animation: up 0.5s;
+  color: rgb(255, 255, 255);
   animation-fill-mode: forwards;
 }
 
-.bigbux {
-  background-color: #212121;
-  border: solid;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  position: relative;
+.helpbux:hover {
+  cursor: url('/public/hand.png'), pointer;
+  background-color: rgb(0, 0, 0);
+  animation: up 0.25s;
   animation-fill-mode: forwards;
-  width: 120px;
-  height: 120px;
-  border-image-source: linear-gradient(
-    45deg,
-    rgb(0, 255, 0),
-    rgb(255, 0, 0),
-    rgb(0, 0, 255)
-  );
-  border-image-slice: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: bounce 1s infinite, down 1s;
-  font-family: cyber;
 }
 
 .txt {
   color: white;
   font-size: 20px;
-  font-weight: bold;
   position: relative;
   width: 150px;
 }
@@ -106,25 +84,28 @@
 .bigbux:hover {
   background-color: rgb(0, 0, 0);
   animation-fill-mode: forwards;
-  color: rgb(32, 201, 207);
+  mix-blend-mode: multiply;
 }
 
 @keyframes up {
   from {
   }
   to {
-    border-color: rgb(32, 201, 207);
-    border-width: thick;
-    color: rgb(32, 201, 207);
+    border: solid;
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
   }
 }
 
 @keyframes down {
   from {
-    border-color: rgb(32, 201, 207);
-    border-width: thick;
-    color: rgb(32, 201, 207);
+    border-bottom: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 5px;
+    color: rgb(0, 0, 0);
   }
   to {
   }
 }
+

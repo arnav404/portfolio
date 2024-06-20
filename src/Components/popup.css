@@ -1,114 +1,140 @@
 .popupimg {
   width: 50%;
   border-color: white;
-  border-radius: 30px;
 }
 
-@font-face {
-  font-family: cyber;
-  src: url(font.otf);
+.stackrow {
+  padding-bottom:10px;
 }
 
-@font-face {
-  font-family: cyberlight;
-  src: url(fontlight.otf);
+
+.linkbutton {
+  animation: smallDown 1s;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  border-width: 0px;
+  width: 100px;
+  border-radius: 12px;
+  height: 40px;
+  background-color: rgb(32, 207, 149);
 }
 
-.backgrounddiv {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.322);
-  position: fixed;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.linkbutton:hover:enabled {
+  animation: smallUp 1s;
+  animation-fill-mode: forwards;
+  cursor: url('/public/hand.png'), pointer;
+  background-color: rgb(175, 248, 221);
+}
+
+.linkbutton:hover:disabled {
+  cursor: url('/public/cursor.png'), pointer;
+}
+
+.buttonset {
+  width: 450px;
 }
 
 .theCard {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: black;
-  border: solid;
-  width: 50vw;
-  height: 500px;
-  border-color: white;
-  border-width: 2px;
-  border-image-slice: 1;
-  border-radius: 40px;
-  z-index: 2;
+  overflow: auto;
+  height: 100vh;
+  z-index: -1;
 }
 
-.liveButton {
-  border: solid;
-  border-color: white;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  z-index: 4;
-  padding: 5px;
-  border-width: 2px;
-  height: 40px;
-  border-radius: 20px;
-  font-family: inherit;
+.buttonslot {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-.liveButton:hover {
-  background-color: rgb(231, 68, 68);
+.cont {
+  padding-top: 150px;
 }
 
-.padding {
-  padding-right: 10px;
-  padding-left: 10px;
+.padleft {
+  justify-content: center;
 }
 
 .desc {
-  transform: translateY(-160px);
-  position: absolute;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
+  color: white;
   font-family: cyberlight;
   padding-right: 15px;
 }
 
-.popuptitle {
-  position: absolute;
-  color: white;
-  transform: translateY(-220px);
+.buttText {
   font-family: cyber;
+  padding-top: 5px;
+  font-size: 18px;
 }
 
-.buttonrow {
-  position: absolute;
-  transform: translateY(170px);
+.nogg {
+  background-color: rgb(175, 61, 61);
 }
 
-.popupcol {
-  transform: translateY(-50%);
+.popuptitle {
+  font-size:40px;
+  color: white;
+  font-family: cyberlight;
+}
+
+.banner {
+  width: 100%;
+  border-radius: 20px;
+  border: solid;
+  border-width:2px;
+  border-color: rgb(32, 207, 149);;
+  display: inline-block;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   padding: 5px;
 }
 
 .builtusing {
   color: white;
-  position: absolute;
-  transform: translateY(70px);
-  font-family: cyber;
-}
-
-.stack {
-  position: absolute;
-  transform: translateY(105px);
-}
-
-.buttontext {
   font-family: cyberlight;
+}
+
+@keyframes jumpUp {
+  from {
+    transform: translate(0%, 100%);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes jumpDown {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0%, 100%);
+  }
+}
+
+.popupcol {
+  pointer-events: all;
+  animation: jumpUp 1s;
+  border-top: solid;
+  border-left: solid;
+  border-right: solid;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-width: 2px;
+  border-color: rgb(32, 207, 149);
+  background-color: rgb(0, 25, 46);
+  background-image: linear-gradient(315deg, rgb(6, 6, 6) 0%, rgb(14, 14, 14) 74%);
+  padding: 40px;
+}
+
+.buttonText {
+  color: white;
+  font-weight: 600;
+  font-family: cyberlight;
+  padding-left: 10px;
+}
+
+.icontxt {
+  padding-left: 10px;
 }
