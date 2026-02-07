@@ -1,0 +1,119 @@
+body {
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'SecondaryFont';
+}
+
+.mint-button {
+    width: 110px;
+    height: 40px;
+}
+
+.heading-text {
+    color: var(--primary-color);
+    opacity: 0;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'MainFont';
+    font-weight: 300;
+    animation: fadeInHeading 0.25s ease-out 1s forwards;
+}
+
+@keyframes fadeInHeading {
+    to {
+        opacity: 1;
+    }
+}
+
+.mint-bar {
+    background-color: var(--primary-color);
+    padding: 0.2rem; /* Maintain vertical padding */
+    border-radius: 8px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    animation: expandToCorner 0.75s ease-out forwards;
+    margin: 0 auto; /* Center the bar horizontally */
+}
+
+@keyframes expandToCorner {
+    0% {
+        width: 0;
+        border-radius: 8px;
+    }
+    100% {
+        width: 100vw;
+        border-radius: 0;
+    }
+}
+
+.mint-bar button {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 300;
+    opacity: 0;
+    font-family: 'SecondaryFont';
+    animation: fadeInButtons 0.25s ease-out 1s forwards;
+}
+
+@keyframes fadeInButtons {
+    to {
+        opacity: 1;
+    }
+}
+
+.mint-bar button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button-row-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.button-container {
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.icon-button {
+    width: 44px;
+    height: 44px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInButtons 0.25s ease-out 1s forwards;
+}
+
+.icon-button:hover {
+    background: #98d8c8AA;
+}
+
+.icon-button svg {
+    width: 24px;
+    height: 24px;
+    fill: rgb(0, 0, 0);
+}

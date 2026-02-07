@@ -1,0 +1,44 @@
+.about-page {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primary-color);
+    font-family: 'SecondaryFont', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scrollable-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 200;
+    pointer-events: none;
+  }
+  
+.about-content {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: var(--background-color);
+    width: 95%;
+    min-height: 100vh;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.about-container {
+    padding-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}

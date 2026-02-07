@@ -1,0 +1,59 @@
+.toggle-switch {
+    display: inline-block;
+    cursor: pointer;
+    margin: 1rem 0;
+  }
+.toggle-switch .switch-option {
+    margin: 0 6px;
+}
+  .switch-track {
+    position: relative;
+    width: 150px;
+    height: 36px;
+    background-color: rgba(152, 216, 200, 0.3);
+    border: 2px solid #98d8c8;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .switch-option {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    z-index: 1;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    filter: brightness(0) saturate(100%) invert(81%) sepia(12%) saturate(1234%) hue-rotate(115deg) brightness(91%) contrast(88%);
+  }
+  
+  .switch-divider {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 1.2rem;
+    color: #98d8c8;
+    font-weight: 300;
+    z-index: 1;
+    user-select: none;
+  }
+  
+  .switch-track.active-a .switch-option.left,
+  .switch-track.active-b .switch-option.right {
+    opacity: 1;
+    filter: brightness(0) saturate(100%) invert(0%);
+  }
+  
+  .switch-track.active-a {
+    background: linear-gradient(to right, #98d8c8 50%, rgba(152, 216, 200, 0.3) 50%);
+  }
+  
+  .switch-track.active-b {
+    background: linear-gradient(to right, rgba(152, 216, 200, 0.3) 50%, #98d8c8 50%);
+  }
+  
+  .switch-track:hover {
+    filter: brightness(1.1);
+  }

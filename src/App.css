@@ -7,6 +7,23 @@
   pointer-events: none;
 }
 
+@font-face {
+  font-family: 'MainFont';
+  src: url('./assets/Soft\ Elegance.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SecondaryFont';
+  src: url('./assets/Soft\ Elegance.ttf') format('opentype');
+}
+
+:root {
+  --primary-color: #0090de;
+  --background-color: rgb(15, 15, 15);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -23,16 +40,37 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.patterned-box {
+  background-image: 
+      repeating-linear-gradient(
+          60deg,
+          transparent,
+          transparent 50px,
+          black 50px,
+          black 55px
+      ),
+      repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 45px,
+          black 50px,
+          black 52px
+      ),
+      repeating-linear-gradient(
+          120deg,
+          transparent,
+          transparent 50px,
+          black 50px,
+          black 55px
+      );
+  background-size: 60px 104px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes shift {
+  0%, 100% {
+      background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+      background-position: 100% 100%, 100% 100%, 50% 50%, 50% 50%, 0% 0%;
   }
 }
