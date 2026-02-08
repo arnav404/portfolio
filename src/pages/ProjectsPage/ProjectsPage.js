@@ -12,31 +12,30 @@ import expData from '../../data/expdata.js';
 function ProjectsPage() {
 
   const [selectedProject, setSelectedProject] = React.useState(null);
-  const [selectedExperiment, setSelectedExperiment] = React.useState(null);
 
   return (
     <div className="projects-page">
       <NavigationBar />
-      <div className="scrollable-wrapper">
         {selectedProject && (
           <ProjectModal selectedProject={selectedProject} setSelectedProject={setSelectedProject}/>
         )}
+      <div className="scrollable-wrapper">
         <div className="projects-content patterned-box">
           <Container className="projects-container">
             <h1 className="page-title">Experiments</h1>
-            <h3>These are small-scale projects built for mathematics and artificial intelligence research. Some of these are visualizers for mathematical concepts. Others are AI agent experiments. Some are both.</h3>
+            <p className="section-descriptor">These are small-scale projects built for mathematics and artificial intelligence research. Some of these are visualizers for mathematical concepts. Others are AI agent experiments. Some are both.</p>
             <Row className="g-4">
               {expData.map((project) => (
-                <Col key={project.id} xs={3} sm={2} md={2} lg={2}>
-                  <ExperimentCard project={project} setSelectedProject={setSelectedProject} />
+                <Col key={project.id} xs={6} sm={2} md={2} lg={2}>
+                  <ExperimentCard project={project} setSelectedProject={setSelectedProject} isActive={project.isActive}/>
                 </Col>
               ))}
             </Row>
             <h1 className="page-title">Projects</h1>
-            <h3>And these are user-facing projects (games, tools, apps).</h3>
+            <p className="section-descriptor">And these are user-facing projects (games, tools, apps).</p>
             <Row className="g-4">
               {projectData.map((project) => (
-                <Col key={project.id} xs={6} sm={6} md={4}>
+                <Col key={project.id} xs={12} sm={6} md={4}>
                   <ProjectCard project={project} setSelectedProject={setSelectedProject} />
                 </Col>
               ))}

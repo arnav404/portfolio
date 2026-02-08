@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './HomePage.css'
+import './../../App.css'
 import { useNavigate } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 export default function HomePage() {
   const [expanded, setExpanded] = useState(false);
@@ -14,21 +15,17 @@ export default function HomePage() {
 const navigate = useNavigate();
 
 return (
+  <div className='patterned-box home-page'>
     <div>
       <h1 className="heading-text">Arnav Thirunagari</h1>
       <div className="mint-bar">
-        <button className="mint-button" onClick={() => navigate('/about')}>about</button>
-        <button className="mint-button" onClick={() => navigate('/projects')}>projects</button>
-        <button className="mint-button" onClick={() => navigate('/resume')}>resume</button>
+        <button className="mint-button" onClick={() => navigate('/about')}><p className="home-button-text">about</p></button>
+        <button className="mint-button" onClick={() => navigate('/projects')}><p className="home-button-text">projects</p></button>
+        <button className="mint-button" onClick={() => navigate('/resume')}><p className="home-button-text">resume</p></button>
       </div>
 
-      <div class="button-row-container">
+      <Container class="button-row-container">
         <div class="button-container">
-            <button class="icon-button" aria-label="Substack">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
-                </svg>
-            </button>
               <a href="https://github.com/arnav404" target="_blank" rel="noopener noreferrer">
                 <button class="icon-button" aria-label="GitHub">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -36,14 +33,10 @@ return (
                     </svg>
                 </button>
                 </a>
-              <button class="icon-button" aria-label="YouTube">
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-              </button>
           </div>
-      </div>
+      </Container>
 
+    </div>
     </div>
 );
 }

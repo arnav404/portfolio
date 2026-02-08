@@ -11,9 +11,25 @@ body {
     font-family: 'SecondaryFont';
 }
 
+
+.home-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: var(--background-color)
+}
+
 .mint-button {
-    width: 110px;
+    width: 120px;
     height: 40px;
+}
+
+.home-button-text {
+    color: var(--background-color);
 }
 
 .heading-text {
@@ -88,7 +104,9 @@ body {
 }
 
 .button-container {
+    margin-top: 0.75rem;
     display: flex;
+    justify-content: center;
     gap: 12px;
     z-index: 10;
 }
@@ -96,7 +114,8 @@ body {
 .icon-button {
     width: 44px;
     height: 44px;
-    background-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: #00000000;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -109,11 +128,15 @@ body {
 }
 
 .icon-button:hover {
-    background: #98d8c8AA;
+    background-color: var(--primary-color);
+}
+
+.icon-button:hover svg {
+    fill: #151515;
 }
 
 .icon-button svg {
     width: 24px;
     height: 24px;
-    fill: rgb(0, 0, 0);
+    fill: var(--primary-color);
 }

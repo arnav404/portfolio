@@ -4,13 +4,30 @@ import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function ResumeRedirect() {
   useEffect(() => {
-    window.location.href = process.env.PUBLIC_URL + '/resume.pdf';
+    // Try different path formats
+    const pdfUrl = process.env.PUBLIC_URL ? 
+      process.env.PUBLIC_URL + '/resume.pdf' : 
+      '/resume.pdf';
+    
+    console.log('Opening PDF at:', pdfUrl); // Debug log
+    
+    const newWindow = window.open(pdfUrl, '_blank');
+    
+    if (!newWindow) {
+      console.error('Popup blocked or failed to open');
+    }
+    
+    // Redirect back
+    setTimeout(() => {
+      window.location.replace('/');
+    }, 100);
   }, []);
   
-  return <div>Redirecting to document...</div>;
+  return <div>Opening document...</div>;
 }
 
 function App() {
@@ -20,7 +37,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/resume" element={
+        <Route path="/resume" replace element={
           <ResumeRedirect />
         }/>
       </Routes>

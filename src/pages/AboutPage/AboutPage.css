@@ -22,10 +22,7 @@
   }
   
 .about-content {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     background-color: var(--background-color);
-    width: 95%;
     min-height: 100vh;
     margin-top: 70px;
     margin-left: auto;
