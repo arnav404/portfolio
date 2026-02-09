@@ -5,7 +5,7 @@ export default function NavigationBar() {
 
     return (<Navbar className="custom-navbar" expand="lg">
         <Container fluid className="px-4">
-        <Navbar.Brand href="/" className="navbar-brand-custom">Arnav.pro</Navbar.Brand>
+        <Navbar.Brand href="/" className="navbar-brand-custom">arnav.pro</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">

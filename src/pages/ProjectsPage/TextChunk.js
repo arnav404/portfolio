@@ -7,10 +7,10 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 const TextChunk = ({ textChunk }) => {
     if (textChunk.type === 'link') {
         return (
-            <div>
+            <div className="text-chunk">
                 <div className="link-row">
-                    <p>{textChunk.content}</p>
-                    <Row className="mt-3">
+                    <p className="text-chunk-content">{textChunk.content}</p>
+                    <Row className="">
                         <Col className="d-flex gap-3">
                         {textChunk.demoLink && (
                             <a
